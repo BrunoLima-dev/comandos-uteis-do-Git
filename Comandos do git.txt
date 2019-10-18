@@ -1,0 +1,125 @@
+GIT
+
+Referência De Comando Git.
+
+Carregar Todos Os Arquivos Em Um Diretório Local Para Um Novo Repositório Git
+Se Você Tiver Um Projeto No Seu Computador E Acabou De Criar Um Repositório Git Vazio No Github, Use Esses Comandos Para Fazer O Upload De Tudo No Git.
+
+Cd Seu Diretório
+Git Init
+Git Remote Add Origin Git@Github.Com: Seu Nome De Usuário / Seu-Repo.Git
+Git Add . 
+Git Commit -Am " Mensagem "   
+Git Push -U Origin Master
+Baixe Todos Os Arquivos Do Repositório Git Para Um Diretório Local
+O Oposto Da Opção Acima - Por Exemplo, Se O Seu Repositório Existir No Github E Você Estiver Trabalhando No Outro Computador Local. Execute Este Comando Para Onde Você Deseja Que O Novo Diretório Apareça (Não No Diretório Que Você Deseja Que Apareça).
+
+Git Clone Git@Github.Com: Seu-Nome-De-Usuário / Seu-Repo.Git        # Usando Ssh   
+Git Clone Https://Github.Com/Your-Username/Your-Repo.Git # Usando Https
+Remover Um Arquivo Do Cache Do Git
+Remova Um Arquivo Em Cache.
+
+Git Rm -R —-Cached File.Txt
+Substituir Diretório Local Inteiro
+Se Você Tiver Alguns Conflitos De Mesclagem Ou Acidentalmente, Começou A Fazer Uma Alteração No Diretório Local Antes De Extrair Alterações Do Mestre, Veja Como Você Pode Reverter Ou Acessar O Diretório Local Para Quem Não Está No Github.
+
+Git Fetch --All
+Git Reset --Hard Origem / Master
+Ignorar Um Diretório
+Se Você Estiver Acompanhando Um Diretório E Depois Decidir Ignorar O Diretório Inteiro, Simplesmente Use-Lo A .Gitignorenão É Suficiente. Primeiro, Você Deve Adicionar O Diretório Ao .Gitignore E, Em Seguida, Executar Este Comando:
+
+Git Rm -R --Cache Seu Diretório
+Em Seguida, Pressione Como Alterações.
+
+ADICIONE .GITIGNORE A UM REPOSITÓRIO EXISTENTE
+SEMELHANTE AO ANTERIOR, MAS VOCÊ PODE SELECIONAR UM .GITIGNORECOM MUITAS ALTERAÇÕES.
+
+Git Rm -R --Cached . 
+Git Add . 
+Git Commit -M " Mensagem "
+FORÇAR UM EMPURRÃO OU PUXAR
+QUANDO VOCÊ REALMENTE DESEJA QUE SEU REPOSITÓRIO LOCAL SUBSTITUA OU CONTROLE REMOTO.
+
+Mestre De Origem Git Push -F
+Mestre De Origem Git Pull -F
+Mesclando Alterações De Solicitação De Recebimento Remoto Com Conflitos
+Faça Uma Nova Ramificação Com Suas Alterações.
+
+Git Checkout -B Mestre De Suas Ramificações
+Git Puxa Seu Mestre.Git
+Brinque Com Os Arquivos E Confirme-Os.
+
+Git Adicionar Arquivos
+Git Commit -M "Mensagem "
+ Mestre De Origem Git Push
+Entre Novamente Em Seu Ramo.
+
+Mestre De Verificação Geral Do Git
+Git Merge --No-Ff < Sua Ramificação) (: Wq ! )
+Mestre De Origem Git Push
+Removedor De Ramo
+Coloque Um :Na Frente Para Remover Em Vez De Atualizar Remotamente.
+
+Origem Do Git Push: Nome Da Filial
+Use --Deleteou -Dpara Local.
+
+Git Branch --Delete Branch-Name
+Substituir Mestre Pelo Conteúdo De Outra Ramificação
+Git Checkout Branch-Name
+Fusão Git -S Nosso Mestre
+Mestre De Verificação Geral Do Git
+Nome Do Ramo De Fusão Git
+Remover Todas As Ramificações Locais, Exceto O Principal
+Ramo Git | Grep -V " Mestre "  | Xargs Git Branch -D
+Mais De Um Ramo Pode Ser Adicionado Ao Grep. Para Remover Todas As Ramificações Locais, Exceto "Master" E "Develop":
+
+Ramo Git | Grep -V " Mestre \ | Desenvolva "  | Xargs Git Branch -D
+PERMITIR CONFIRMAÇÃO VAZIA
+CORRIJA OU PROBLEMA DOS GANCHOS DO GIT, ALEGANDO QUE TUDO ESTÁ "ATUALIZADO".
+
+Mestre De Produção Git Push
+Git Commit --Allow-Empty -M ' Push Para Executar O 
+Mestre De Produção Pós-Recebimento ' Git Push
+Mesclar Ramificação De Novos Recursos No Mestre
+Mesclar Ramificações.
+
+Mestre De Verificação Geral Do Git
+Mestre De Origem Do Git Pull
+Git Mesclar Novo Recurso
+Mestre De Origem Git Push
+Mudar Para O Ramo Que Existe Na Origem
+Git Fetch --Prune --All
+Git Checkout Outro Ramo
+Ramificação Da Origem
+Origem De Busca Do Git
+Git Checkout --Track Origin / < Remote_Branch_Name >
+Aceite Todas As Alterações Recebidas
+Git Pull -Xtheirs
+Rebase Do Desenvolvimento
+Git Fetch --Prune --All
+Origem Do Git Rebase / Desenvolvimento
+Puxão
+Empurrão
+Esconderijo
+Afaste Como Alterações E Mude Para Outro Ramo
+
+Esconderijo
+Git Checkout -B Novo Ramo
+Git Stash Pop
+Acidentalmente Comprometido Em Desenvolver E Desejar Mover Esse Comprometimento Para Uma Filial
+Ramo Git Novo Ramo
+Git Reset Head ~ 1
+Git Checkout < Arquivos >
+Páginas Do Github Para Pastas Não-Docs
+"Dist" Ou O Que Você Quiser.
+
+Git Subárvore Push --Prefix Dist Origin Gh-Pages
+Subárvore No Repo
+Git Subárvore Add --Prefix < Local-Dir > Https://Github.Com/Taniarascia/ < Repo > Master --Squash
+Git Subárvore Pull --Prefixo < Local-Dir > Https://Github.Com/Taniarascia/ < Repo > Mestre --Squash
+Git Subtree Push --Prefix < Local-Dir > Https://Github.Com/Taniarascia/ < Repo > Master --Squash
+Saindo Do Vim
+PARA INICIANTES NA LINHA DE COMANDO, TERMINAR NA TELA DE MENSAGEM DE CONFIRMAÇÃO (NORMALMENTE QUANDO VOCÊ ESQUECE OU -MSINALIZAR UMA ADIÇÃO DE VERIFICAÇÃO ) É CONFUSO PORQUE PRESSIONAR ESCAPE (OU CTRL+ C) NÃO SAI DA TELA, POIS O EDITOR PADRÃO DO GIT É O VIM. EM VEZ DISSO, PRESSIONE ESCAPE (SE VOCÊ COMEÇAR A TENTAR DIGITAR ALGUMA COISA) E DIGITE O SEGUINTE COMANDO:
+
+: Q
+E Pressione Enter E Você Retornará Para Onde Estava.
